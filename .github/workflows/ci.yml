@@ -1,0 +1,33 @@
+name: MiniLLM CI
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify Python Installation
+        run: |
+          python --version
+          pip --version
+
+      - name: CI Passed
+        run: echo "MiniLLM CI completed successfully."

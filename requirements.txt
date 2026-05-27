@@ -1,0 +1,7 @@
+torch
+fastapi
+uvicorn
+numpy
+pytest
+black
+flake8
