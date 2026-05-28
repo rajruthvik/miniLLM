@@ -26,3 +26,12 @@ if torch.cuda.is_available():
     print(x.device)
 else:
     print("\nCUDA GPU not available.")
+    import torch
+
+x = torch.tensor(2.0, requires_grad=True)
+
+y = x ** 2
+
+y.backward()
+
+print(x.grad)
