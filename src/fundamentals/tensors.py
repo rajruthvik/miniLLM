@@ -26,3 +26,13 @@ if torch.cuda.is_available():
     print(x.device)
 else:
     print("\nCUDA GPU not available.")
+
+import torch
+
+x = torch.tensor([
+    [1, 2],
+    [3, 4]
+])
+
+print(x[0][1])
+print(x[0, 1])
