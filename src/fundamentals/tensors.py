@@ -28,6 +28,15 @@ else:
     print("\nCUDA GPU not available.")
     import torch
 
+import torch
+
+x = torch.tensor([
+    [1, 2],
+    [3, 4]
+])
+
+print(x[0][1])
+
 x = torch.tensor(2.0, requires_grad=True)
 
 y = x ** 2
