@@ -35,3 +35,12 @@ y = x ** 2
 y.backward()
 
 print(x.grad)
+
+import torch
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+x = torch.tensor([1, 2, 3]).to(device)
+
+print(x)
+print(x.device)
