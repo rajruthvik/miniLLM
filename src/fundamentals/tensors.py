@@ -84,3 +84,7 @@ print(y) # original tensor remains unchanged
 
 y.grad
 print(y.grad) # None, since y does not require gradients
+
+z= y * 2
+print(z) # element-wise multiplication
+
