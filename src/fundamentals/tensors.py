@@ -88,3 +88,27 @@ print(y.grad) # None, since y does not require gradients
 z= y * 2
 print(z) # element-wise multiplication
 
+#matrix opereations
+import torch
+
+a = torch.tensor([
+    [1, 2],
+    [3, 4]
+])
+
+b = torch.tensor([
+    [5, 6],
+    [7, 8]
+])
+
+print(a @ b)
+
+#broadcasting
+import torch
+
+x = torch.tensor([
+    [1, 2],
+    [3, 4]
+])
+
+print(x + 10)
