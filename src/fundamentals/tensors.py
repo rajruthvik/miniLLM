@@ -112,3 +112,24 @@ x = torch.tensor([
 ])
 
 print(x + 10)
+
+#autograd
+
+x = torch.tensor(2.0, requires_grad=True)
+
+y = x ** 2
+
+y.backward()
+
+print(x.grad)
+
+#bigger function in autograd
+
+x = torch.tensor(2.0, requires_grad=True)
+
+y = x**2 + 3*x + 1
+
+y.backward()
+
+print(x.grad)
+
