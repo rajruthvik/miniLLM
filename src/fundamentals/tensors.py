@@ -147,3 +147,5 @@ y = x**2
 y.backward()
 
 print(x.grad)  # 8
+# just grad and tensor with requires_grad=True will accumulate gradients, so we need to zero them out before the next backward pass
+x.grad.zero_()  # zero out gradients
