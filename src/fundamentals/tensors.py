@@ -186,19 +186,19 @@ for epoch in range(100):
     targets = torch.randn(10, 1)  # random target values
 
 #working neural network using MINST dataset
-# import torch
-# import torch.nn as nn
-# import torch.optim as optim
-# import torchvision
-# import torchvision.transforms as transforms
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torchvision
+import torchvision.transforms as transforms
 
-# # 1. Load MNIST dataset
-# transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])
-# trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-# trainloader = torch.utils.data.DataLoader(trainset, batch_size=64, shuffle=True)
+# 1. Load MNIST dataset
+transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])
+trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=64, shuffle=True)
 
-# testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-# testloader = torch.utils.data.DataLoader(testset, batch_size=64, shuffle=False)
+testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
+testloader = torch.utils.data.DataLoader(testset, batch_size=64, shuffle=False)
 
 # # 2. Define a simple feedforward network
 # class Net(nn.Module):
