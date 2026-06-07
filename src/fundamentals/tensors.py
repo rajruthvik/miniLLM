@@ -200,13 +200,13 @@ trainloader = torch.utils.data.DataLoader(trainset, batch_size=64, shuffle=True)
 testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
 testloader = torch.utils.data.DataLoader(testset, batch_size=64, shuffle=False)
 
-# # 2. Define a simple feedforward network
-# class Net(nn.Module):
-#     def __init__(self):
-#         super(Net, self).__init__()
-#         self.fc1 = nn.Linear(28*28, 128)   # input layer
-#         self.fc2 = nn.Linear(128, 64)      # hidden layer
-#         self.fc3 = nn.Linear(64, 10)       # output layer (10 digits)
+# 2. Define a simple feedforward network
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.fc1 = nn.Linear(28*28, 128)   # input layer
+        self.fc2 = nn.Linear(128, 64)      # hidden layer
+        self.fc3 = nn.Linear(64, 10)       # output layer (10 digits)
 
 #     def forward(self, x):
 #         x = x.view(-1, 28*28)              # flatten image
