@@ -208,18 +208,19 @@ class Net(nn.Module):
         self.fc2 = nn.Linear(128, 64)      # hidden layer
         self.fc3 = nn.Linear(64, 10)       # output layer (10 digits)
 
-#     def forward(self, x):
-#         x = x.view(-1, 28*28)              # flatten image
-#         x = torch.relu(self.fc1(x))
-#         x = torch.relu(self.fc2(x))
-#         x = self.fc3(x)
-#         return x
+    def forward(self, x):
+        x = x.view(-1, 28*28)              # flatten image
+        x = torch.relu(self.fc1(x))
+        x = torch.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
 
 # model = Net()
 
 # 3. Loss and optimizer
 # criterion = nn.CrossEntropyLoss()
 # optimizer = optim.Adam(model.parameters(), lr=0.001)
+
 
 # # 4. Training loop
 # for epoch in range(5):  # 5 epochs
