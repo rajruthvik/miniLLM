@@ -217,9 +217,9 @@ class Net(nn.Module):
 
 # model = Net()
 
-# 3. Loss and optimizer
-# criterion = nn.CrossEntropyLoss()
-# optimizer = optim.Adam(model.parameters(), lr=0.001)
+3. Loss and optimizer
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 
 # # 4. Training loop
