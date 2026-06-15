@@ -223,16 +223,16 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 
 # # 4. Training loop
-# for epoch in range(5):  # 5 epochs
-#     for inputs, labels in trainloader:
-#         outputs = model(inputs)
-#         loss = criterion(outputs, labels)
+for epoch in range(5):  # 5 epochs
+    for inputs, labels in trainloader:
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
 
-#         optimizer.zero_grad()
-#         loss.backward()
-#         optimizer.step()
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
 
-#     print(f"Epoch {epoch+1}, Loss: {loss.item():.4f}")
+    print(f"Epoch {epoch+1}, Loss: {loss.item():.4f}")
 
 # # 5. Testing loop
 # correct, total = 0, 0
