@@ -235,12 +235,12 @@ for epoch in range(5):  # 5 epochs
     print(f"Epoch {epoch+1}, Loss: {loss.item():.4f}")
 
 # # 5. Testing loop
-# correct, total = 0, 0
-# with torch.no_grad():
-#     for inputs, labels in testloader:
-#         outputs = model(inputs)
-#         _, predicted = torch.max(outputs.data, 1)
-#         total += labels.size(0)
-#         correct += (predicted == labels).sum().item()
+correct, total = 0, 0
+with torch.no_grad():
+    for inputs, labels in testloader:
+        outputs = model(inputs)
+        _, predicted = torch.max(outputs.data, 1)
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
 
-# print(f"Accuracy on test set: {100 * correct / total:.2f}%")
+print(f"Accuracy on test set: {100 * correct / total:.2f}%")
