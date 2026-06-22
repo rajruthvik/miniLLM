@@ -245,3 +245,4 @@ with torch.no_grad():
 
 print(f"Accuracy on test set: {100 * correct / total:.2f}%")
 # lets do the rest tomorrow 
+# 
