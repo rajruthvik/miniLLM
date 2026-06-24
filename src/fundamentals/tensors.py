@@ -245,4 +245,14 @@ with torch.no_grad():
 
 print(f"Accuracy on test set: {100 * correct / total:.2f}%")
 # lets do the rest tomorrow 
-# 
+
+print(f"Accuracy on test set: {100 * correct / total:.2f}%")
+
+correct, total =0, 0
+with torch.no_grad():
+    for inputs, labels in testloader:
+        outputs = model(inputs)
+        _, predicted = torch.max(outputs.data, 1)
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
+        
